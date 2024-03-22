@@ -4,7 +4,6 @@ body {
       box-sizing: border-box;
       background-color: #ddd;
       font-family: Georgia;
-
 }
 
 /*Navigation links start here*/
@@ -241,6 +240,13 @@ input:focus {
       margin: 5px;
 }
 
+@media (max-width: 465px) {
+      .image-card img {
+            width: 124px;
+            height: 124px;
+      }
+}
+
 .image-card:hover {
       transform: scale(1.1);
       margin: 10px;
@@ -277,11 +283,21 @@ footer span {
 }
 
 .footer-links a i {
-      font-size: 17px;
+      font-size: 16px;
+}
+
+@media (max-width: 465px) {
+      .footer-links a i {
+            font-size: 15px;
+      }
 }
 
 .footer-links a:hover {
       color: #007bff;
+}
+
+footer span a:visited {
+      color: #ccc;
 }
 
 footer span a {
