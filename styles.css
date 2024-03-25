@@ -3,55 +3,58 @@ body {
       padding: 0;
       box-sizing: border-box;
       background-color: #ddd;
-      font-family: Georgia;
+      font-family: 'Poppins';
 }
 
 /*Navigation links start here*/
 nav {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      justify-content: flex-end;
+      padding: 5px 10px;
       background-color: #0e2e4f;
 }
 
-nav h2 {
-      margin: 5px 0 5px 15px;
-      padding: 0;
-      font-size: 20px;
+nav h3 {
+      max-height: 50%;
+      margin-right: auto;
+      margin-left: 20px;
       color: #ddd;
-      text-align: center;
 }
 
-nav h2:hover {
+nav h3:hover {
       cursor: pointer;
 }
 
-.nav-links {
-      margin: 0;
-      padding: 0;
+.navbar ul {
+      display: flex;
+      align-items: center;
       list-style-type: none;
-      background-color: #0e2e4f;
-      width: 100%;
-      overflow: hidden;
-      text-align: right;
+      padding: 0;
+      margin: 0;
 }
 
-.nav-links li {
-      display: inline-block;
-      margin: 10px;
+.navbar li {
+      margin-left: 10px;
 }
 
-.nav-links li a {
-      display: block;
-      padding: 14px 20px;
+.nav-links li:last-child {
+      margin-left: 0;
+}
+
+/* .nav-links li:last-child {
+      margin-right: 15px;
+} */
+
+.navbar a {
+      padding: 5px 10px;
       text-decoration: none;
-      text-align: center;
-      color: #fff;
+      color: #ddd;
 }
 
-.nav-links li a:hover {
+.navbar a:hover {
       background-color: #4172a3;
-      color: #f2f2f2;
+      color: #eee;
+      border-radius: 5px;
 }
 
 @media (max-width: 600px) {
@@ -60,12 +63,9 @@ nav h2:hover {
             align-items: flex-start;
       }
 
-      nav h2 {
-            padding-left: 10em;
-      }
-
-      .nav-links li {
-            display: block;
+      .navbar ul,
+      .navbar h3 {
+            margin-top: 5px;
       }
 }
 
@@ -74,7 +74,7 @@ nav h2:hover {
 /* Main Content start here */
 main {
       max-width: 100%;
-      margin: 30px;
+      padding: 20px;
 }
 
 h1,
@@ -176,7 +176,7 @@ input:focus {
 
 .buttons-btn button {
       width: 100%;
-      padding: 10px 20px;
+      padding: 20px 10px;
       border: none;
       border-radius: 5px;
       color: #fff;
@@ -218,8 +218,7 @@ input:focus {
       width: 100%;
       display: flex;
       flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
 }
 
@@ -229,66 +228,77 @@ input:focus {
       border-radius: 5px;
       overflow: hidden;
       position: relative;
-      transition: transform 0.3s ease;
+      /* transition: transform 0.3s ease; */
 }
 
 .image-card img {
       width: 200px;
       height: 200px;
+      max-width: 100%;
       border-radius: 5px;
       object-fit: cover;
-      margin: 5px;
+      margin: 5px 5px;
 }
 
-@media (max-width: 465px) {
+@media (max-width: 600px) {
       .image-card img {
-            width: 124px;
-            height: 124px;
+            width: 120px;
+            height: 120px;
       }
 }
 
 .image-card:hover {
-      transform: scale(1.1);
-      margin: 10px;
+      transform: scale(1.15);
+      margin: 5px;
       cursor: pointer;
 }
 
 /*Gallery styles ends here*/
 
 /*Footer styles start here*/
-footer {
-      text-align: center;
+.footer {
       background-color: #0e2e4f;
       color: #ccc;
-      margin-top: 10px;
+      padding: 10px 20px;
       display: flex;
       justify-content: center;
-      align-items: flex-end;
-      font-size: 16px;
+      flex-wrap: wrap;
 }
 
-footer span {
-      padding: 15px 20px 15px 0;
+.developer-info span a {
+      padding: 0 15px;
+      text-decoration: none;
+      color: #ccc;
+}
+
+.developer-info span a:visited {
+      color: #ccc;
+}
+
+.developer-info span a:hover {
+      color: #007bff;
 }
 
 .footer-links {
-      margin-left: 8em;
-      margin-bottom: 15px;
+      display: flex;
 }
 
 .footer-links a {
-      margin-top: 20px;
-      margin-right: 5px;
+      margin: 5px 10px;
+      font-size: 20px;
       color: #ccc;
+      text-decoration: none;
+      display: flex;
+      justify-content: flex-end;
 }
 
 .footer-links a i {
       font-size: 16px;
 }
 
-@media (max-width: 465px) {
-      .footer-links a i {
-            font-size: 15px;
+@media (max-width: 600px) {
+      footer {
+            font-size: 14.5px;
       }
 }
 
@@ -296,17 +306,5 @@ footer span {
       color: #007bff;
 }
 
-footer span a:visited {
-      color: #ccc;
-}
-
-footer span a {
-      text-decoration: none;
-      color: #ccc;
-}
-
-footer span a:hover {
-      color: #007bff;
-}
 
 /*Footer styles start here*/
