@@ -10,7 +10,7 @@ body {
 nav {
       display: flex;
       justify-content: flex-end;
-      padding: 5px 10px;
+      padding: 10px 20px;
       background-color: #0e2e4f;
 }
 
@@ -61,11 +61,16 @@ nav h3:hover {
       nav {
             flex-direction: column;
             align-items: flex-start;
+            padding: 5px 5px;
       }
 
       .navbar ul,
       .navbar h3 {
             margin-top: 5px;
+      }
+
+      .navbar a {
+            padding: 0 2px;
       }
 }
 
@@ -218,7 +223,7 @@ input:focus {
       width: 100%;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
 }
 
@@ -242,8 +247,9 @@ input:focus {
 
 @media (max-width: 600px) {
       .image-card img {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
+            margin: 2px;
       }
 }
 
@@ -259,6 +265,7 @@ input:focus {
 .footer {
       background-color: #0e2e4f;
       color: #ccc;
+      font-size: 12px;
       padding: 10px 20px;
       display: flex;
       justify-content: center;
@@ -269,6 +276,7 @@ input:focus {
       padding: 0 15px;
       text-decoration: none;
       color: #ccc;
+      font-size: 13px;
 }
 
 .developer-info span a:visited {
@@ -285,7 +293,7 @@ input:focus {
 
 .footer-links a {
       margin: 5px 10px;
-      font-size: 20px;
+      font-size: 15px;
       color: #ccc;
       text-decoration: none;
       display: flex;
@@ -293,18 +301,16 @@ input:focus {
 }
 
 .footer-links a i {
-      font-size: 16px;
+      font-size: 15px;
 }
 
 @media (max-width: 600px) {
       footer {
-            font-size: 14.5px;
+            font-size: 10.5px;
       }
 }
 
 .footer-links a:hover {
       color: #007bff;
 }
-
-
 /*Footer styles start here*/
